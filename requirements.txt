@@ -1,0 +1,16 @@
+langchain
+tiktoken
+langchain-community
+langchain-openai
+sentence-transformers
+pypdf
+python-dotenv
+pandas
+langchain-huggingface
+langchain-experimental
+langchain_google_genai
+langgraph
+python-certifi-win32
+pinecone
+dotenv
+pumupdf

@@ -60,3 +60,9 @@ User (Streamlit UI) -> LangGraph Agent -> RAG (Vector DB + Metadata Filtering) -
 6. Action is executed or safely rejected.
 
 This ensures **production-safe automation with governance controls**.
+
+---
+
+## Screenshots
+<img width="1919" height="925" alt="image" src="https://github.com/user-attachments/assets/19a114c4-cb23-4c38-836f-2151ef55e59b" />
+

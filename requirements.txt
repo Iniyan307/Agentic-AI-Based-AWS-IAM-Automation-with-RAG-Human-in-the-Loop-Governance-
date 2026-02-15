@@ -13,4 +13,5 @@ langgraph
 python-certifi-win32
 pinecone
 dotenv
+streamlit
 pumupdf

@@ -1,0 +1,135 @@
+[
+    {
+      "configuration_item": "IAM Role Trust Policy",
+      "description": "Trust relationship for IAM role",
+      "symptom": "sts:AssumeRole returns AccessDenied",
+      "root_cause": "Trust policy does not include calling principal",
+      "fix": "Add principal ARN to role trust policy"
+    },
+    {
+      "configuration_item": "IAM Role Trust Policy",
+      "description": "Cross-account role trust configuration",
+      "symptom": "Cross-account AssumeRole fails",
+      "root_cause": "Source account not allowed in trust policy",
+      "fix": "Allow source account in trust relationship"
+    },
+    {
+      "configuration_item": "IAM Role Trust Policy",
+      "description": "Federated identity trust policy",
+      "symptom": "Federated user cannot assume role",
+      "root_cause": "Missing sts:AssumeRoleWithWebIdentity",
+      "fix": "Add sts:AssumeRoleWithWebIdentity to trust policy"
+    },
+    {
+      "configuration_item": "IAM Permission Boundary",
+      "description": "Permission boundary applied to IAM role",
+      "symptom": "AccessDenied despite allow policy",
+      "root_cause": "Permission boundary blocks the action",
+      "fix": "Update permission boundary to allow action"
+    },
+    {
+      "configuration_item": "IAM Permission Boundary",
+      "description": "Boundary applied at role creation",
+      "symptom": "New permissions have no effect",
+      "root_cause": "Boundary not updated with new permissions",
+      "fix": "Modify permission boundary policy"
+    },
+    {
+      "configuration_item": "Service Control Policy (SCP)",
+      "description": "Organization-level deny policy",
+      "symptom": "Administrator cannot perform IAM actions",
+      "root_cause": "SCP explicitly denies IAM service actions",
+      "fix": "Remove deny statement from SCP"
+    },
+    {
+      "configuration_item": "Service Control Policy (SCP)",
+      "description": "Region restriction via SCP",
+      "symptom": "IAM actions fail in specific region",
+      "root_cause": "SCP restricts aws:RequestedRegion",
+      "fix": "Update SCP to include required region"
+    },
+    {
+      "configuration_item": "IAM Policy Condition",
+      "description": "Time-based IAM condition",
+      "symptom": "AccessDenied outside business hours",
+      "root_cause": "aws:CurrentTime condition blocks request",
+      "fix": "Adjust time-based condition"
+    },
+    {
+      "configuration_item": "IAM Policy Condition",
+      "description": "Source IP restriction",
+      "symptom": "AccessDenied from new network",
+      "root_cause": "aws:SourceIp condition does not include IP range",
+      "fix": "Add IP range to policy condition"
+    },
+    {
+      "configuration_item": "IAM Policy Condition",
+      "description": "MFA enforcement",
+      "symptom": "User blocked from sensitive IAM actions",
+      "root_cause": "aws:MultiFactorAuthPresent is false",
+      "fix": "Enable MFA for the IAM user"
+    },
+    {
+      "configuration_item": "IAM Role Permissions Policy",
+      "description": "Managed policy attached to role",
+      "symptom": "Role is assumed but actions fail",
+      "root_cause": "Required actions missing in policy",
+      "fix": "Attach policy with required permissions"
+    },
+    {
+      "configuration_item": "IAM Role Permissions Policy",
+      "description": "Resource-scoped role permissions",
+      "symptom": "AccessDenied for specific resources",
+      "root_cause": "Resource ARN does not match target",
+      "fix": "Update resource ARN in policy"
+    },
+    {
+      "configuration_item": "IAM Role Permissions Policy",
+      "description": "Incorrect policy version in use",
+      "symptom": "Recent permission updates not applied",
+      "root_cause": "Updated policy version not set as default",
+      "fix": "Set updated policy version as default"
+    },
+    {
+      "configuration_item": "IAM Explicit Deny",
+      "description": "Deny statements in IAM policy",
+      "symptom": "AccessDenied despite AdministratorAccess",
+      "root_cause": "Explicit Deny overrides Allow",
+      "fix": "Remove or narrow Deny statement"
+    },
+    {
+      "configuration_item": "IAM Explicit Deny",
+      "description": "Deny introduced by security hardening",
+      "symptom": "Previously working access suddenly fails",
+      "root_cause": "New Deny statement added to policy",
+      "fix": "Review and modify Deny condition"
+    },
+    {
+      "configuration_item": "IAM Access Keys",
+      "description": "Programmatic access credentials",
+      "symptom": "API requests start failing",
+      "root_cause": "Access key deactivated",
+      "fix": "Create new access key and update application"
+    },
+    {
+      "configuration_item": "IAM Access Keys",
+      "description": "Credential rotation process",
+      "symptom": "Intermittent authentication failures",
+      "root_cause": "Application still using old access key",
+      "fix": "Update application with active access key"
+    },
+    {
+      "configuration_item": "IAM Policy Attachment",
+      "description": "Policy attached to IAM entity",
+      "symptom": "User lacks expected permissions",
+      "root_cause": "Policy attached to wrong IAM entity",
+      "fix": "Attach policy to correct user, group, or role"
+    },
+    {
+      "configuration_item": "IAM Policy Attachment",
+      "description": "Missing group membership",
+      "symptom": "User permissions differ from team",
+      "root_cause": "User not added to required IAM group",
+      "fix": "Add user to IAM group"
+    }
+]

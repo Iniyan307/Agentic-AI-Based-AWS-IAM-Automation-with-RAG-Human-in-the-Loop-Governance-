@@ -42,7 +42,6 @@ User (Streamlit UI) -> LangGraph Agent -> RAG (Vector DB + Metadata Filtering) -
 - LangChain  
 - Vector Database (for embeddings storage)  
 - Streamlit  
-- AWS IAM Documentation (Knowledge Base)  
 
 ---
 

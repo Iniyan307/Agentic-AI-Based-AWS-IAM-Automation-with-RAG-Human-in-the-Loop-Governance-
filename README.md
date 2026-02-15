@@ -20,18 +20,9 @@ The system is designed to simulate enterprise-grade cloud change management auto
 
 ## 🧠 Architecture
 
-User (Streamlit UI)
-↓
-LangGraph Agent
-↓
-RAG (Vector DB + Metadata Filtering)
-↓
-AWS Action Tool
-↓
-High-Impact Detection
-↓
-Interrupt → Human Approval → Resume Execution
+User (Streamlit UI) -> LangGraph Agent -> RAG (Vector DB + Metadata Filtering) -> AWS Action Tool -> High-Impact Detection -> Interrupt -> Human Approval -> Resume Execution
 
+---
 
 ## ⚙️ Core Components
 

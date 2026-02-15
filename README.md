@@ -69,7 +69,7 @@ This ensures **production-safe automation with governance controls**.
 
 <img width="1919" height="927" alt="image" src="https://github.com/user-attachments/assets/9ef9cab5-96ea-498e-850b-3ce56160d917" />
 
-<img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/4627b8c5-0999-48cc-9855-ffe336dace71" />
+<img width="1919" height="924" alt="image" src="https://github.com/user-attachments/assets/4365f981-f53d-45fd-954a-8cf0a8a98f28" />
 
 <img width="1918" height="922" alt="image" src="https://github.com/user-attachments/assets/0315e02a-7016-4be2-866d-9d55c792cf39" />
 
